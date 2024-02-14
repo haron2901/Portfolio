@@ -1,0 +1,28 @@
+image: php:8.1-fpm-alpine
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  only:
+    - dev
+  artifacts:
+    paths:
+      - ./
+  script:
+    - export APP_ENV=prod
+    - mkdir -p var && chmod -R 777 var
+
+
+deploy:
+  stage: deploy
+  only:
+    - dev
+  script:
+    - zip -r $CI_COMMIT_SHA.zip .
+    - mv $CI_COMMIT_SHA.zip /var/www/$PROJECT_FOLDER/
+    - cd  /var/www/$PROJECT_FOLDER/ && unzip -q $CI_COMMIT_SHA.zip -d $CI_COMMIT_SHA && rm $CI_COMMIT_SHA.zip && rm -R current && mv $CI_COMMIT_SHA current
+    - cd  /var/www/$PROJECT_FOLDER/current && mkdir var/cache && composer install && cp /var/www/.env.local /var/www/$PROJECT_FOLDER/current/ && mv .env.local .env
+    - cd  /var/www/$PROJECT_FOLDER/current/frontend && npm i && npm run build && exit

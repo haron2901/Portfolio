@@ -1,0 +1,19 @@
+.input {
+    color: #B6B4AF;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 0.5rem;
+    border: 1px solid #B6B4AF;
+    outline: none;
+    transition: .3s;
+    padding: 1.2rem 1.25rem;
+}
+
+.input:focus {
+    color: #1E3244;
+    border: 1px solid #1E3244;
+
+}

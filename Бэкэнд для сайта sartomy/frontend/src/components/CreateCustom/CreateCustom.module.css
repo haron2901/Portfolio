@@ -1,0 +1,138 @@
+.container {
+    width: 100%;
+    margin-top: 13vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 1.25rem;
+    padding-left: 1.56rem;
+    background: white;
+    position: relative;
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+}
+
+.projectTools {
+    display: flex;
+    margin-left: 2.44rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paintTools {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-self: right;
+    margin-left: auto;
+    margin-right: 1.5rem;
+
+}
+
+.canvas {
+    margin-top: 2rem;
+    width: 75rem;
+    height: 31.25rem;
+    border-radius: 0.625rem;
+    background: #F8F8F8;
+    position: relative;
+    overflow: hidden;
+}
+
+.layerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.2rem;
+    height: 6rem;
+    width: 75rem;
+}
+
+.layer {
+    width: 10rem;
+    height: 5rem;
+    border-radius: 0.625rem;
+    background: #D9D9D9;
+    margin: 0 .655rem;
+    position: relative;
+    transition: .2s;
+
+}
+
+.activeLayer {
+    box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.checkbox {
+    position: absolute;
+    top: .31rem;
+    right: .31rem;
+}
+
+.img {
+    position: absolute;
+    width: 10rem;
+    border: 1px solid red;
+    user-select: none;
+    cursor: grab;
+}
+
+.label {
+    outline: none;
+    background: transparent;
+    border: 1px solid red;
+    user-select: none;
+    position: absolute;
+}
+
+.label:focus {
+    border: 1px solid blue;
+}
+
+.drawArea {
+    position: absolute;
+}
+
+.tShirtImg {
+    position: absolute;
+    height: 30rem;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.canvasSvg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.layerImg {
+    position: absolute;
+    user-select: none;
+    width: auto;
+    height: 4.2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.canvasSvg svg {
+    width: 10rem;
+    height: 5rem;
+    border-radius: 0.625rem;
+
+}
+
+.pdfIcon {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.7rem;
+}

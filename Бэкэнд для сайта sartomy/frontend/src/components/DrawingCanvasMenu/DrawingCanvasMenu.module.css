@@ -1,0 +1,13 @@
+.menu {
+    width: 50rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: .5rem;
+    align-items: center;
+    background-color: #a3a3a32d;
+    position: absolute;
+    bottom: .5rem;
+    right: 50%;
+    transform: translateX(50%);
+}

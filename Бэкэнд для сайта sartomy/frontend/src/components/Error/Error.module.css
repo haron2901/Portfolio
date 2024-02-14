@@ -1,0 +1,46 @@
+.container {
+    position: absolute;
+    bottom: 1rem;
+    width: 75rem;
+    background: #500c0c;
+    height: 5rem;
+    z-index: 2;
+    border: .2rem solid #f32121;
+    border-radius: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f32121;
+    animation: .3s ease-in-out showErr;
+}
+
+.showAnimation {
+    animation: .3s ease-in-out showErr;
+}
+
+.hideAnimation {
+    animation: .3s ease-in-out hideErr;
+    bottom: -6rem;
+}
+
+@keyframes showErr {
+    0% {
+        transform: translateY(6rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes hideErr {
+    0% {
+        transform: translateY(-4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+
+    }
+}
+
