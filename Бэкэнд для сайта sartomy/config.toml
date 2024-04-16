@@ -1,8 +1,0 @@
-[[runners]]
-executor = "ssh"
-    [runners.ssh]
-    host = "185.225.35.13"
-    port = "22"
-    user = "deployer"
-    password = "12434401"
-    identity_file = "/home/deployer/.ssh/id_ed25519"
